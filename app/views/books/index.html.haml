@@ -1,0 +1,13 @@
+.row
+  - @books.each do |book|
+    .col-md-4
+      .book-panel
+        %h2= book.title
+        %ul.categories
+          - book.categories.each do |category|
+            %li= category.name
+        %p.authors= book.authors.map(&:name).to_sentence
+        %p.year
+          = book.editor
+          , #{book.year}
+        %p.price= book.prices
