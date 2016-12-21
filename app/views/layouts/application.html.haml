@@ -34,8 +34,6 @@
           %form.navbar-form.navbar-right{action: books_index_path}
             .form-group
               = select_tag "author", options_from_collection_for_select(@authors, "id", "name"), prompt: "Author", class: "form-control"
-            %button{type: "submit"}
-              Search
 
     .container
       - flash.each do |name, msg|
