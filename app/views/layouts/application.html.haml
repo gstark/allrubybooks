@@ -25,12 +25,18 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          = link_to "#", class: "navbar-brand" do
-            Allrubybooks
+          = link_to root_path, class: "navbar-brand" do
+            All Ruby Books
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              = link_to "Home", "#"
+              = link_to "Home", root_path
+          %form.navbar-form.navbar-right{action: books_index_path}
+            .form-group
+              = select_tag "author", options_from_collection_for_select(@authors, "id", "name"), prompt: "Author", class: "form-control"
+            %button{type: "submit"}
+              Search
+
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do
