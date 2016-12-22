@@ -1,5 +1,7 @@
 # README
 
+![screenshot](https://github.com/tiy-tpa-ruby/allrubybooks/raw/master/doc/allrubybooks.gif)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
